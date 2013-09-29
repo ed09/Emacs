@@ -15,7 +15,7 @@
  '(which-func ((t nil))))
 
 
-;; MANUAL CONFIG BELOW ;;
+;; MANUAL CONFIG BELOW
 
 (add-to-list 'load-path "~/.emacs.d/")
 
