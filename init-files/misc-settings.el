@@ -6,8 +6,6 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Change font
-;;(default ((t (:family "Inconsolata" :foundry "unknown" :slant 'normal :weight 'normal :height 113 :width 'normal))))
-
 (set-face-attribute 'default nil :family "Inconsolata")
 (set-face-attribute 'default nil :foundry "unknown")
 (set-face-attribute 'default nil :slant 'normal)
@@ -15,7 +13,7 @@
 (set-face-attribute 'default nil :height 113)
 (set-face-attribute 'default nil :width 'normal)
 
-;;  Numbers in the colum
+;;  Numbers in the column
 (column-number-mode t)
 (global-linum-mode t)
 
