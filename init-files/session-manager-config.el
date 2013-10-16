@@ -20,7 +20,7 @@
   (interactive)
   (unless name
     (setq name (my-desktop-get-session-name "Load session: ")))
-(setq name "practicar")
+;; (setq name "practicar")
   (desktop-read (concat my-desktop-session-dir name)))
 
 (defun my-desktop-get-session-name (prompt)
