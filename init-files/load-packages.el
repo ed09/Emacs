@@ -20,17 +20,17 @@
 
 ;; For Cedet
 (require 'semantic)
-(require 'semantic/sb)
-(require 'srecode)
+;; (require 'semantic/sb)
+;; (require 'srecode)
 
 ;; Yasnippet
 (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.8.0")
 (require 'yasnippet)
 
-(setq yas-snippet-dirs
-      '("~/.emacs.d/my_snippets/"            ;; personal snippets
-        "~/.emacs.d/elpa/yasnippet-0.8.0/snippets/"    ;; the default collection
-        ))
+;; (setq yas-snippet-dirs
+;;       '("~/.emacs.d/my_snippets/"            ;; personal snippets
+;;         "~/.emacs.d/elpa/yasnippet-0.8.0/snippets/"    ;; the default collection
+;;         ))
 (yas-global-mode 1)
 (setq yas-also-auto-indent-first-line t)
 
@@ -39,6 +39,7 @@
 
 ;; Make buffer switch command show suggestions
 (ido-mode 1)
+(setq ido-enable-flex-matching t)
 
 ;; Displays function name in the line mode and change color for solarized theme
 (which-function-mode 1)
@@ -48,5 +49,13 @@
 (windmove-default-keybindings)
 
 ;; Solarized from batsov
-;; (require 'solarized)
-;; (add-to-list 'custom-theme-load-path "/home/edu/.emacs.d/themes/solarized-emacs-master/")
+(require 'solarized)
+(add-to-list 'custom-theme-load-path "/home/edu/.emacs.d/themes/solarized-emacs-master/")
+
+(defun toggle-fullscreen ()
+  "Toggle full screen on X11"
+  (interactive)
+  (when (eq window-system 'x)
+    (set-frame-parameter
+     nil 'fullscreen
+     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))

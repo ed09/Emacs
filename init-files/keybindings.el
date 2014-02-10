@@ -13,14 +13,18 @@
 (global-set-key (kbd "<M-S-up>") 'enlarge-window)
 
 ;; Change C-t to C-p and C-p to C-t
-(global-set-key "" (quote previous-line))
+(global-set-key (kbd "C-t") 'previous-line)
+;;(global-set-key "" (quote previous-line))
 ;;(global-set-key "" (quote transpose-chars))
 ;; if the above line is commented that means that 
 ;; it is for compability across modes
 
 ;; Rebind backward-paragraph and foward-paragraph
-(global-set-key (kbd "M-[") 'backward-paragraph)
-(global-set-key (kbd "M-]") 'forward-paragraph)
+;; (global-set-key (kbd "M-[") 'backward-paragraph)
+;; (global-set-key (kbd "M-]") 'forward-paragraph)
+(global-set-key (kbd "M-p") 'backward-paragraph)
+(global-set-key (kbd "M-n") 'forward-paragraph)
+;; Trying with M-p and M-n
 
 ;; Copy line without previous selection
 (global-set-key (kbd "M-2") 'copy-line-or-region)
@@ -28,12 +32,20 @@
 ;; Cut line without previous selection
 (global-set-key (kbd "M-3") 'cut-line-or-region)
 
-;; Change ctrl-x ' to ctrl-' for expand abbrev
+;; Change ctrl-x ' to M-8 for expand abbrev
 (global-set-key (kbd "M-8") 'expand-abbrev)
 
 ;; Kill line
 (global-set-key (kbd "M-9") 'kill-whole-line)
 
+;; Make easier move to top and bottom
+(global-set-key (kbd "C-,") 'beginning-of-buffer)
+(global-set-key (kbd "C-.") 'end-of-buffer)
+
+;; C-c <key> commands
+
+;; Add save-buffer keybind
+;; (global-set-key (kbd "C-'") 'save-buffer)
 
 ;; ;; Change C-x (1-3, 0, o) to s-(1-3, 5, 4)
 ;; (global-set-key (kbd "s-1") 'delete-other-windows)
@@ -46,7 +58,7 @@
 ;; Change some common keys to s-key
 
 ;; Rebind backward-page and foward-page (doesn't work properly, it works like
-;; go to begginning or go to end...)
+;; go to beginning or go to end...)
 ;; (global-set-key (kbd "s-[") 'backward-page)
 ;; (global-set-key (kbd "s-]") 'forward-page)
 
@@ -59,6 +71,9 @@
 
 ;; F7 find file
 ;; (global-set-key (kbd "<f7>") 'find-file)
+
+;; F7 save buffer
+(global-set-key (kbd "<f7>") 'save-buffer)
 
 ;; F8 save buffer
 ;; (global-set-key (kbd "<f8>") 'save-buffer)
@@ -77,7 +92,6 @@
 ;; (global-set-key (kbd "<f7>") mode-keymap)
 ;; Enable/Disable ido mode
 ;;(global-set-key (kbd "<f7> i") 'ido-mode)
-
 
 ;; Define special keybinding for F8 
 ;; (We will use it for modes and all that)
@@ -101,6 +115,9 @@
 ;; Enable shell-script mode
 (global-set-key (kbd "<f8> s") 'shell-script-mode)
 
+;; Enable lisp mode
+(global-set-key (kbd "<f8> l") 'lisp-mode)
+
 ;; Change C-x (1-3, 0, o) to f8-(1-3, 0, 4)
 (global-set-key (kbd "<f8> 1") 'delete-other-windows)
 (global-set-key (kbd "<f8> 2") 'split-window-below)
@@ -110,3 +127,8 @@
 (global-set-key (kbd "<f8> 0") 'delete-window)
 (global-set-key (kbd "<f8> =") 'balance-windows) ;; ctrl-x +
 
+
+;; Full screen, kde full screen doesn't work, I don't know why...
+;; I will use f12 because of new functions
+;; for full screen and f11 key in emacs 24.4
+(global-set-key [f12] 'toggle-fullscreen)

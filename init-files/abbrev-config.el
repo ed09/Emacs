@@ -12,6 +12,7 @@
     ("ejemcd" "~/Dropbox/Edik/Computer stuff/Programacion/Ejemplos de Programacion/Ejemplos en C/")
     ("prc" "Dropbox/Edik/Computer stuff/Programacion/Practicar Vim")
     ("prcd" "~/Dropbox/Edik/Computer stuff/Programacion/Practicar Vim")
+    ("!lookc" "/* ********** LOOK AT THIS CODE */")
 ))
 
 ;; Stop asking whether to save newly added abbrev when quitting emacs

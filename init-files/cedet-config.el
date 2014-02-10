@@ -21,7 +21,7 @@
 ;; (require 'semantic)
 ;; (require 'semantic/sb)
 ;; (require 'srecode)
-(global-ede-mode 1)
+;; (global-ede-mode 1)
 (semantic-mode 1)
 (global-semanticdb-minor-mode 1)
 (global-semantic-idle-scheduler-mode 1)
@@ -32,6 +32,6 @@
 (global-semantic-idle-summary-mode 1)
 (global-semantic-mru-bookmark-mode 1)
 (semanticdb-enable-gnu-global-databases 'c-mode)
-(semanticdb-enable-gnu-global-databases 'c++-mode)
+;; (semanticdb-enable-gnu-global-databases 'c++-mode)
 (set-default 'semantic-case-fold t) 
 

@@ -39,3 +39,6 @@
 
 ;; Safe themes
 ;;(setq custom-safe-themes (quote ("39fb431548791db3e64b047524a65be40a41f14779f4087255c7ad759f329d73" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
+
+;; What I found in .emacs
+;; (put 'set-goal-column 'disabled nil)
